@@ -2,15 +2,15 @@
 
 #Este servidor fue creado por Mateo lozano usando express + mongoose
 
-#Operaciones
-# -GET 
-# -GETBYNAME 
-# -GETBYAPELLIDO 
-# -DELETE 
-# -POST
+# Operaciones
+ -GET 
+ -GETBYNAME 
+ -GETBYAPELLIDO 
+ -DELETE 
+ -POST
 
 
-#RUTAS
+# RUTAS
 # -GET /api/getdeportistas
 # -GETBYNAME /api/getbyname
 # -GETBYAPELLIDO /api/getbyapellido
