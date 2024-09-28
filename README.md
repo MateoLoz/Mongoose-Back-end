@@ -9,6 +9,7 @@
 -DELETE 
 -POST
 
+
 #RUTAS
 GET /api/getdeportistas
 GETBYNAME /api/getbyname
