@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const mongooseconection = async() =>{
-   await mongoose.connect(`mongodb+srv://Mateo1423:Mateo1423@cluster0.acphn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+   await mongoose.connect(process.env.MONGO_URL)
    .then(()=>console.log("conectado a mongodb con exito!"));
 
 }
