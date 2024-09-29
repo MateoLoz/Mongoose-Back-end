@@ -26,7 +26,7 @@ const getdeportist = async (req,res) =>{
     try{
       
   const deportistas = await Atleta.find({});
-  return res.send(deportistas);
+  return res.json(deportistas);
         }catch(err){
 
             res.send(err);
