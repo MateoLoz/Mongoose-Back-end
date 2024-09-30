@@ -10,7 +10,7 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cors());
-app.use(bodyparser.urlencoded({extended: false}));
+app.use(bodyparser.urlencoded({extended: true}));
 const {mongooseconection} = require('../controller/mongocontroller');
 app.use(require('../router/router'));
 mongooseconection();
