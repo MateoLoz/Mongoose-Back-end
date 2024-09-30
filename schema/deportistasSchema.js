@@ -17,7 +17,7 @@ const atletaSchema = new mongoose.Schema({
    },
    sexo:{
       type:String,
-      max:1,
+      max:3,
       transform:{
       toupper: v => v.toUpperCase(),
       },
@@ -34,8 +34,6 @@ const atletaSchema = new mongoose.Schema({
    telefono:{
       type:String,
       required:false,
-      max:12,
-      min:12
    },
 });
 
