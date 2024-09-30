@@ -17,10 +17,10 @@ const {mongooseconection} = require('../controller/mongocontroller');
 app.use(require('../router/router'));
 mongooseconection();
 
-app.all('/', function(req, res) {
+app.all('/', function(req, res,next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
-
+next();
  });
 
 app.get('/', (req,res)=>{
