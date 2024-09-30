@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cors());
 app.use(bodyparser.urlencoded({extended: false}));
+res.header("Access-Control-Allow-Credentials", true);
 const {mongooseconection} = require('../controller/mongocontroller');
 app.use(require('../router/router'));
 mongooseconection();
