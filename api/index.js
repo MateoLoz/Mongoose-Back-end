@@ -53,4 +53,4 @@ app.use('api/deletedeportistas', deletedeportist);
 
 
 
-app.listen(port, () => console.log('running server!));
+app.listen(port);
