@@ -13,9 +13,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(cors());
 app.use(bodyparser.urlencoded({extended: false}));
 
-const {mongooseconection} = require('../controller/mongocontroller');
-app.use(require('../router/router'));
-mongooseconection();
+
 
 app.all('*', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -29,6 +27,9 @@ app.get('/', (req,res)=>{
     res.send('Mongo serverside!');
 })
 
+const {mongooseconection} = require('../controller/mongocontroller');
+app.use(require('../router/router'));
+mongooseconection();
 
 
 
