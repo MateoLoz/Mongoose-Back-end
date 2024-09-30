@@ -33,7 +33,9 @@ const {postdeportist ,getdeportist,  getdeportistbyname, getdeportistbyapellido,
 
 
 app.use('/api/getdeportistas',getdeportist);
-app.use('/api/posts',cors(corsOptions),postdeportist);
+app.use('/api/posts',cors(corsOptions),(req,res)=>{
+    postdeportist();
+});
 app.use('api/getbyname', getdeportistbyname);
 app.use('api/getbyapellido', getdeportistbyapellido);
 app.use('api/deletedeportistas', deletedeportist);
