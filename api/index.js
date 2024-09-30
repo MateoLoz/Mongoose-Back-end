@@ -3,7 +3,6 @@ const app = express();
 const cors = require('cors');
 const bodyparser = require('body-parser');
 const port = 3336;
-const host = "http://127.0.0.1:" + port;
 
 
 
@@ -61,4 +60,4 @@ app.use('api/deletedeportistas', deletedeportist);
 
 
 
-app.listen(port, () => console.log(host));
+app.listen(port, () => console.log('running server!));
