@@ -9,7 +9,7 @@ const port = 3336;
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(cors({origin:'https:127.0.0.1:3336}));
+app.use(cors({origin:'*'}));
 app.use(bodyparser.urlencoded({extended: true}));
 const {mongooseconection} = require('../controller/mongocontroller');
 app.use(require('../router/router'));
