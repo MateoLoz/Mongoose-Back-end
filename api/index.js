@@ -33,11 +33,11 @@ app.get('/', (req,res)=>{
 const {postdeportist ,getdeportist,  getdeportistbyname, getdeportistbyapellido, deletedeportist } = require('../controller/mongoquery');
 
 
-app.use('/api/getdeportistas',getdeportist);
+app.get('/api/getdeportistas',getdeportist);
 app.post('/api/posts',postdeportist);
-app.use('api/getbyname', getdeportistbyname);
-app.use('api/getbyapellido', getdeportistbyapellido);
-app.use('api/deletedeportistas', deletedeportist);
+app.get('api/getbyname', getdeportistbyname);
+app.get('api/getbyapellido', getdeportistbyapellido);
+app.delete('api/deletedeportistas', deletedeportist);
 
 
 
