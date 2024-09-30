@@ -34,7 +34,7 @@ const {postdeportist ,getdeportist,  getdeportistbyname, getdeportistbyapellido,
 
 
 app.use('/api/getdeportistas',getdeportist);
-app.use('/api/posts',postdeportist);
+app.post('/api/posts',postdeportist);
 app.use('api/getbyname', getdeportistbyname);
 app.use('api/getbyapellido', getdeportistbyapellido);
 app.use('api/deletedeportistas', deletedeportist);
